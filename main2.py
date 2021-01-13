@@ -28,9 +28,9 @@ with open('new.csv', 'r') as csvfile:
 
 
 #price = price[0:1000]
-k = 2
+k = int(input('введите число транзакций '))
+money = int(input('введите начальный капитал '))
 n = len(price)
-money = 100000
 dp = [[(-1, -1) for j in range(k + 1)] for i in range(n + 1)]
 for i in range(k + 1):
     dp[0][i] = (money, -1)
